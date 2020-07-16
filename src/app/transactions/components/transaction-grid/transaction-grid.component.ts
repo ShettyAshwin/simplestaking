@@ -37,7 +37,7 @@ export class TransactionGridComponent implements OnInit {
 
   ngAfterViewInit(): void {
     this.scrollDispatcher.scrolled().pipe(
-      filter(event => this.virtualScroll.getRenderedRange().end === this.virtualScroll.getDataLength())
+      filter(event => this.virtualScroll.measureScrollOffset('bottom')===0)
     ).subscribe((event) => {
       this.store.dispatch(new frmStore.transactionLoad(this.lastRecordId));     
     })

@@ -32,7 +32,7 @@ describe('workspace-project App', () => {
     page.scrollADiv("cdk-virtual-scroll-content-wrapper");
     browser.sleep(2000);
     page.scrollADiv("cdk-virtual-scroll-content-wrapper");
-    expect(page.getTableCount()).toBeGreaterThan(10);
+    expect(page.getTableCount()).toBeGreaterThan(11);
     expect(page.getTablelLastRow()).not.toEqual(lastRowText);
   });
 

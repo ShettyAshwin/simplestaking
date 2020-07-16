@@ -84,8 +84,7 @@ describe('TransactionGridComponent', () => {
     expect(compiled.innerHTML).toContain('table');
     expect(fixture.componentInstance.transactions.length).toBe(0);
     fixture.detectChanges();
-    spyOn(fixture.componentInstance.virtualScroll, 'getRenderedRange').and.returnValue({end : 10, start : 1})
-    spyOn(fixture.componentInstance.virtualScroll, 'getDataLength').and.returnValue(10);
+    spyOn(fixture.componentInstance.virtualScroll, 'measureScrollOffset').and.returnValue(0)
     expect(store.select).toHaveBeenCalled();
     expect(fixture.componentInstance.isLoaded).toBe(true);
     fixture.componentInstance.ngAfterViewInit();
@@ -106,8 +105,7 @@ describe('TransactionGridComponent', () => {
     expect(compiled.innerHTML).toContain('table');
     expect(fixture.componentInstance.transactions.length).toBe(0);
     fixture.detectChanges();
-    spyOn(fixture.componentInstance.virtualScroll, 'getRenderedRange').and.returnValue({end : 5, start : 1})
-    spyOn(fixture.componentInstance.virtualScroll, 'getDataLength').and.returnValue(10);
+    spyOn(fixture.componentInstance.virtualScroll, 'measureScrollOffset').and.returnValue(0)
     expect(store.select).toHaveBeenCalled();
     expect(fixture.componentInstance.isLoaded).toBe(true);
     fixture.componentInstance.ngAfterViewInit();
