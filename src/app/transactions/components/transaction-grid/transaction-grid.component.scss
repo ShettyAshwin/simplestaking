@@ -1,0 +1,73 @@
+.col-genric{
+    width:20vw;
+}
+.col-amount {
+    width:40vw;
+    padding-left:5px;
+}
+th{
+  padding-left:0px;
+}
+
+.amount-xtz{
+  font-weight: 500;
+  font-size:14px;
+}
+
+.header-table {
+  margin-bottom:0rem;
+}
+
+.md-chip {
+    display: inline-block;   
+    padding: 0 12px;
+    border-radius: 32px;
+    font-size: 13px;
+    height: 23px;
+    font-weight: 400!important;
+    text-transform: capitalize;
+    &.md-chip-hover:hover {
+      background: #ccc;
+    }    
+  }
+  .md-chip.transaction{
+    background: #e0e0e0;
+    }
+
+
+  .header-text {
+    color : #5c5e61;
+    font-weight: 400;
+    font-size:15px;
+    padding-top:0.25rem;
+    padding-bottom:0.25rem;
+    border-top:0px;    
+  }
+
+  td {
+      font-weight: 400;
+      font-size:14px;
+      padding-top:0.45rem;
+      padding-bottom:0.45rem;
+  }
+ 
+
+  .table-header{
+      background-color: #f8f9fb;     
+  }
+  td:first-child, th:first-child {
+    padding-left: 25px!important;
+  }
+
+  .icon-recent{
+      font-size:25px;
+      padding-left: 25px;
+  }
+  tr{
+    height: 25px;
+  }
+
+
+  .title-text{
+      padding-left: 5px;
+  }

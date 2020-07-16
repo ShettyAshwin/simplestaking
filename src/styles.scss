@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+.table-overide td{
+    padding: 0.45rem!important;
+    border-top: 0px!important
+}
