@@ -45,8 +45,8 @@ describe('TransactionGridComponent', () => {
     const fixture = TestBed.createComponent(TransactionGridComponent);    
     const compiled = fixture.nativeElement;
     expect(fixture.componentInstance.isLoaded).toBe(false);
-    expect(compiled.innerHTML).not.toContain('cdk-virtual-scroll-viewport');
-    expect(compiled.innerHTML).not.toContain('table');
+    expect(compiled.innerHTML).toContain('cdk-virtual-scroll-viewport');
+    expect(compiled.innerHTML).toContain('table');
     expect(fixture.componentInstance.transactions.length).toBe(0);
     fixture.detectChanges();
     expect(store.select).toHaveBeenCalled();
@@ -61,8 +61,8 @@ describe('TransactionGridComponent', () => {
     const fixture = TestBed.createComponent(TransactionGridComponent);    
     const compiled = fixture.nativeElement;
     expect(fixture.componentInstance.isLoaded).toBe(false);
-    expect(compiled.innerHTML).not.toContain('cdk-virtual-scroll-viewport');
-    expect(compiled.innerHTML).not.toContain('table');
+    expect(compiled.innerHTML).toContain('cdk-virtual-scroll-viewport');
+    expect(compiled.innerHTML).toContain('table');
     expect(fixture.componentInstance.transactions.length).toBe(0);
     fixture.detectChanges();
     expect(store.select).toHaveBeenCalled();
@@ -80,8 +80,8 @@ describe('TransactionGridComponent', () => {
     const fixture = TestBed.createComponent(TransactionGridComponent);    
     const compiled = fixture.nativeElement;
     expect(fixture.componentInstance.isLoaded).toBe(false);
-    expect(compiled.innerHTML).not.toContain('cdk-virtual-scroll-viewport');
-    expect(compiled.innerHTML).not.toContain('table');
+    expect(compiled.innerHTML).toContain('cdk-virtual-scroll-viewport');
+    expect(compiled.innerHTML).toContain('table');
     expect(fixture.componentInstance.transactions.length).toBe(0);
     fixture.detectChanges();
     spyOn(fixture.componentInstance.virtualScroll, 'getRenderedRange').and.returnValue({end : 10, start : 1})
@@ -102,8 +102,8 @@ describe('TransactionGridComponent', () => {
     const fixture = TestBed.createComponent(TransactionGridComponent);    
     const compiled = fixture.nativeElement;
     expect(fixture.componentInstance.isLoaded).toBe(false);
-    expect(compiled.innerHTML).not.toContain('cdk-virtual-scroll-viewport');
-    expect(compiled.innerHTML).not.toContain('table');
+    expect(compiled.innerHTML).toContain('cdk-virtual-scroll-viewport');
+    expect(compiled.innerHTML).toContain('table');
     expect(fixture.componentInstance.transactions.length).toBe(0);
     fixture.detectChanges();
     spyOn(fixture.componentInstance.virtualScroll, 'getRenderedRange').and.returnValue({end : 5, start : 1})

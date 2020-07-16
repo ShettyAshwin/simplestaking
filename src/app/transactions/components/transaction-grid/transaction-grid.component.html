@@ -1,38 +1,21 @@
-<section class="container">
-    <div class="row">
-        <div class="col-sm-12"><span class="icon-recent"><svg viewBox="0 0 24 24" fill="black" width="18px"
-                    height="18px">
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path
-                        d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z" />
-                </svg></span><span class="title-text">Recent Transactions</span></div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="row">
-                <table class="table table-overide" *ngIf="isLoaded">
-                    <cdk-virtual-scroll-viewport style="height: 34vh" itemSize="10">
-                        <tr class="table-header">
-                            <th class="col-genric header-text">Type</th>
-                            <th class="col-amount header-text">Amount XTZ ( USD )</th>
-                            <th class="col-genric header-text">Date</th>
-                            <th class="col-genric header-text">Address</th>
-                        </tr>
-                        <ng-container *cdkVirtualFor="let tran of transactions">
-                            <tr>
-                                <td class="col-genric">
-                                    <div class="md-chip {{tran.type}}">{{tran.type}}</div>
-                                </td>
-                                <td class="col-amount">
-                                    <div class="amount-xtz">{{tran.fee}} XTZ</div>
-                                </td>
-                                <td class="col-genric">{{tran.timeStamp | transactionFormat}}</td>
-                                <td class="col-genric">{{tran.address | addressFormat}}</td>
-                            </tr>
-                        </ng-container>
-                    </cdk-virtual-scroll-viewport>
-                </table>
-            </div>
-        </div>
-    </div>
+<section class="transaction">
+    <h3>Recent Transactions</h3>
+    <cdk-virtual-scroll-viewport itemSize="10">
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Amount XTZ (USD)</th>
+                <th>Date</th>
+                <th>Address</th>
+            </tr>
+            <ng-container *cdkVirtualFor="let tran of transactions">
+                <tr class="sent">
+                    <td><span>{{tran.type}}</span></td>
+                    <td>{{tran.fee}} XTZ <span> </span></td>
+                    <td>{{tran.timeStamp | transactionFormat}}</td>
+                    <td>{{tran.address | addressFormat}}</td>
+                </tr>
+            </ng-container>
+        </table>
+    </cdk-virtual-scroll-viewport>
 </section>

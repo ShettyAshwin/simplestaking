@@ -10,7 +10,7 @@ export class AppPage {
   }
 
   getGridTitle():Promise<string>{
-    return element(by.css('app-root .title-text')).getText() as Promise<string>;
+    return element(by.css('app-root .transaction h3')).getText() as Promise<string>;
   }
 
   getTableHeader():Promise<string>{
@@ -18,11 +18,11 @@ export class AppPage {
   }
 
   getTableCount():Promise<number>{
-    return element.all(by.css("app-root .cdk-virtual-scroll-content-wrapper tr")).count() as Promise<number>;
+    return element.all(by.css("app-root .cdk-virtual-scroll-content-wrapper table tr")).count() as Promise<number>;
   }
 
   getTablelLastRow():Promise<string>{
-    return element.all(by.css("app-root .cdk-virtual-scroll-content-wrapper tr")).last().getText() as Promise<string>;
+    return element.all(by.css("app-root .cdk-virtual-scroll-content-wrapper table tr")).last().getText() as Promise<string>;
   }
 
   scrollADiv(name:string):Promise<void>{
